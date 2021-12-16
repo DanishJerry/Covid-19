@@ -1,0 +1,92 @@
+@media (max-width: 991px) {
+
+    html{
+        font-size: 55%;
+    }
+    nav .logo{
+        width: 90px;
+        height: 50px;
+        margin: 3px;
+        margin-left: 30px;
+    }
+    .home .content h3{
+        font-size: 3.5rem;
+    }
+   
+}
+@media screen  and (max-width: 819px){
+    .home .content{
+        text-align: center;
+        padding-top: 5rem;
+    }
+}
+    @media screen  and (max-width: 757px){
+    .prevent .row:last-child{
+        flex-flow:column-reverse;
+    }
+    .prevent .row .image img{
+        width: 100%;
+    }
+    }
+    @media screen and (max-width: 600px){
+        .latest-report{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+@media screen  and (max-width: 670px) {
+
+  #menu{
+      display: block;
+  }
+  nav .navbar{
+      position: fixed;
+      top: -100%;
+      left:0;
+      height: 100%;
+      width: 100%;
+      background: #eee;
+      border-top: .2rem solid rgba(0,0,0,0.1);
+  }
+  nav .navbar ul{
+      flex-direction: column;
+      padding: 2rem;
+  }
+  nav .navbar ul li{
+      text-align: center;
+      width: 100%;
+      margin: 1rem 0;
+  }
+  nav .navbar ul li a{
+      display: block;
+      padding: 1rem;
+  }
+  nav .navbar ul li a.active,
+  nav .navbar ul li a:hover{
+    padding: 1rem;
+    background: rgb(13, 126, 255);
+    color: #fff;
+    border: none;
+    border-radius: 5rem;
+}
+ #menu.fa-times{
+    transform:rotate(180deg);
+    transition: .3s ease;
+}
+nav .navbar.nav-toggle{
+    top: 9rem;
+    transition: .3s ease;
+}
+   
+}
+@media screen  and (max-width: 500px){
+    html{
+        font-size: 50%;
+    }
+    section{
+        padding: 0 3%;
+        padding-top: 9rem;
+    }
+
+}

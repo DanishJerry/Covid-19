@@ -1,0 +1,635 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    border: none;
+    text-decoration: none;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+nav{
+    background: #fff;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    padding: 2.5rem 7%;
+}
+nav .logo{
+    width: 100px;
+    height: 60px;
+    margin: 5px;
+    margin-left: 20px;
+}
+
+nav .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+nav .navbar ul li{
+    margin-left: 2.5rem;
+
+}
+nav .navbar ul li a{
+    color: gray;
+    font-size: 1.7rem;
+    text-decoration: none;
+}
+nav .navbar ul li a.active,
+nav .navbar ul li a:hover{
+    color: rgb(13, 126, 255);
+    border-bottom: .2rem solid rgb(13, 126, 255);
+    padding: .7rem 0;
+
+}
+#menu{
+    font-size: 3rem;
+    color: #999;
+    cursor: pointer;
+    display: none;
+}
+section{
+    min-height: 100vh;
+    padding: 0 7%;
+    padding-top: 9rem;
+}
+.btn{
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 4rem;
+    border-radius: 5rem;
+    background: rgb(13, 126, 255);
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    font-size: 1.4rem;
+}
+.btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: rgb(247, 30, 113);
+    clip-path: polygon(0 0, 100% 0, 0 0, 0% 100%);
+    transition: .6s linear;
+}
+.btn:hover::before{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.home .image{
+    flex: 1 1 40rem;
+}
+.home .image img{
+    width: 100%;
+    
+}
+.home .content{
+    flex: 1 1 40rem;
+}
+.home .content span{
+    color: red;
+    font-size: 2.8rem;
+}
+.home .content h3{
+    color:#666;
+    font-size: 4rem;
+}
+.home .content p{
+    color:#999;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.headings{
+    font-size: 2.8rem;
+    color: #666;
+}
+.headings span{
+    color: rgb(247, 30, 113);
+}
+.protect .headings{
+    text-align: center;
+    padding-top: 1rem;
+}
+.protect .main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1240px;
+    flex-wrap:wrap ;
+    padding: 30px 0;
+}
+.protect .main-container .card-container{
+    position: relative;
+    min-width: 320px;
+    height: 500px;
+    box-shadow: inset 5px 5px 5px rgba(0,0,0,0.05),
+                inset -5px -5px 5px rgba(255,255,255,0.5),
+                       5px 5px 5px rgba(0,0,0,0.05),
+                    -5px -5px 5px rgba(255,255,255,0.5);
+    border-radius: 15px;
+    margin: 30px;
+}
+.protect .main-container .card-container .card-box{
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    width:90% ;
+    background: #ebf5fc;
+    box-shadow: 0 10px 20px rgba(0, 0, 0,0.1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.protect .main-container .card-container:hover .card-box {
+    transform: translateY(-50px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    background: linear-gradient(45deg, rgb(230, 77, 196), rgb(68, 144, 243));
+}
+.protect .main-container .card-container .card-box .card-content{
+    padding: 20px;
+    text-align: center;
+
+}
+.protect .main-container .card-container .card-box .card-content h2{
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 5rem;
+    color: rgba(0,0,0,0.02);
+    transition: 0.5s;
+    pointer-events: none;
+}
+.protect .main-container .card-container:hover .card-box .card-content h2{
+    color: rgba(0,0,0,0.05);
+}
+.protect .main-container .card-container .card-box .card-content img{
+    border-radius: 50%;
+    height: 17rem;
+    width: 17rem;
+}
+.protect .main-container .card-container .card-box .card-content h3{
+    font-size: 2rem;
+    padding-top: 2rem;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+}
+.protect .main-container .card-container:hover .card-box .card-content h3,
+.protect .main-container .card-container:hover .card-box .card-content p{
+    color: #fff;
+}
+.protect .main-container .card-container .card-box .card-content p{
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+}
+.protect .main-container .card-container .card-box .card-content a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background:  rgb(13, 126, 255);
+    margin-top: 15px;
+    border-radius: 20px;
+    color:#fff;
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: 0 10px 20px rgba(0, 0, 0,0.2);
+}
+.protect .main-container .card-container:hover .card-box .card-content a{
+    background: rgb(13, 126, 255);
+}
+
+.symptoms{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.symptoms .content,
+.symptoms .image{
+    flex: 1 1 40rem;
+}
+.symptoms .image img{
+    width: 100%;
+}
+.symptoms .content p{
+    font-size: 1.5rem;
+    color: #999;
+    padding: 1rem 0;
+}
+.symptoms .content a{
+    margin:2rem 0;
+}
+.symptoms .content ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+.symptoms .content ul .two{
+    padding-left: 4.5rem;
+}
+.symptoms .content ul li{
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    color: #666;
+    padding: .5rem 0;
+}
+.prevent{
+    background: #222;
+}
+.prevent .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+}
+.prevent .row .image{
+    flex:1 1 37rem;
+    height: 40rem;
+    text-align: center;
+}
+.prevent .row .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.prevent .row .content{
+    padding: 2rem 0;
+    flex: 1 1 37rem;
+}
+.prevent .row .content .headings{
+    color: #fff;
+}
+.prevent .row .content p{
+    font-size: 1.7rem;
+    color: #aaa;
+    padding: 1rem 0;
+}
+.prevent .row .content ul li{
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    color: #aaa;
+    padding: .5rem 0;
+}
+.handwash .headings{
+    text-align: center;
+    padding: 1rem;
+}
+.handwash .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;  
+}
+
+.handwash .box-container .box{
+    background: #fff;
+    border: .1rem solid rgba(0,0,0,0.1);
+    margin: 2rem;
+    margin-top: 3rem;
+    padding: 2rem 3.5rem;
+    text-align: center;
+    position: relative;
+}
+.handwash .box-container .box img{
+    height: 17rem;
+    width: 17rem;
+}
+.handwash .box-container .box h3{
+    font-size: 2rem;
+    color: #666;
+    padding: 1rem 0;
+}
+.handwash .box-container .box span{
+    display: block;
+    position: absolute;
+    top: -2rem;
+    left: -2rem;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    background:  rgb(13, 126, 255);
+    border-radius: 5rem;
+}
+.handwash .box-container .box:hover{
+    transform: translateY(-1rem);
+}
+
+.stat .headings{
+    text-align: center;
+    padding-top: 1rem;
+}
+
+
+.footer{
+    min-height: auto;
+    padding-top: 0;
+    background: #333;
+
+}
+.footer .box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.footer .box-container .box{
+    flex: 1 1 25rem;
+    margin: 2rem;
+
+}
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    color: #fff;
+    padding-bottom: 2rem;
+    font-weight: normal;
+}
+.footer .box-container .box p{
+    font-size: 1.5rem;
+    color: #ccc;
+    padding: 1rem 0;
+}
+.footer .box-container .box p i{
+    padding-right: 1rem;
+    color:  rgb(13, 126, 255);
+}
+.footer .box-container .box a{
+    font-size: 1.5rem;
+    color: #ccc;
+    padding: 1rem 0;
+    display: block;
+}
+.footer .box-container .box a:hover{
+    color:  rgb(13, 126, 255);
+
+}
+.footer .box-container .box .share{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+
+}
+.footer .box-container .box .share a{
+    height: 5rem;
+    width: 5rem;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    border-radius: 5rem;
+    border: .1rem solid #fff3;
+    margin-right: 1rem;
+}
+.footer .box-container .box .share a:hover{
+    background: #fff;
+}
+.footer .credits{
+    padding: 2rem 1rem;
+    text-align: center;
+    color: #fff;
+    font-weight: normal;
+    font-size: 2rem ;
+    border-top: .1rem solid #fff3;
+}
+.footer .credits a{
+    color:rgb(247, 30, 113)  ;
+}
+
+.scroll-top{
+    opacity: 75%;
+    position: fixed;
+    bottom: 7.5rem;
+    right: 4rem;
+    z-index: 100;
+    display: none;
+}
+.scroll-top img{
+    height: 3rem;
+    width: 3rem;
+}
+
+
+
+
+.stat .covid-box nav ul{
+    display: flex;
+    align-items: center;
+}
+.stat .covid-box nav ul li{
+    list-style: none;
+}
+.stat .covid-box nav ul li:last-child{
+    padding-right: 20px;
+}
+.stat .covid-box nav ul li a {
+    text-decoration: none;
+    color: #6a149b;
+    padding: 10px;
+}
+/* ---------------------------------------------- */
+/*                      MAIN                      */
+/* ---------------------------------------------- */
+.stat .covid-box main{
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 16px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.stat .covid-box .hide{
+    display: none;
+}
+.stat .covid-box .fadeIn{
+    animation: fade 0.5s ease-in-out;
+}
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/* -------- BG IMAGE -------- */
+.stat .covid-box .stats{
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)) ,url('../img/bg.jpg');
+    background-size: cover;
+}
+/* -------- LATEST REPORT -------- */
+.stat .covid-box .latest-report{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+
+    color: #FFF;
+}
+
+.country,
+.total-cases,
+.recovered,
+.deaths{
+    height: 100px;
+}
+
+.name{
+    font-size: 2.2em;
+    color: #be64f1;
+    font-weight: bold;
+}
+
+.change-country{
+    cursor: pointer;
+}
+
+.title{
+    font-size: 1.3em;
+}
+.total-cases .value{
+    font-size: 2em;
+    font-weight: bold;
+}
+.recovered .value{
+    font-size: 2em;
+    font-weight: bold;
+    color: #009688;
+}
+.deaths .value{
+    font-size: 2em;
+    font-weight: bold;
+    color: #f44336;
+}
+.new-value{
+    font-size: 1.3em;
+}
+/* -------- CHART -------- */
+.chart{
+    width: 80%;
+    height: 70vh;
+    min-height: 500px;
+
+    margin: 0 auto;
+    padding: 50px 0;
+}
+/* -------- SEARCH COUNTRY -------- */
+.search-country{
+    position: relative;
+    top: 10px;
+}
+.search-box{
+    position: absolute;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 400px;
+    height: 30px;
+
+    background-color: #111;
+
+    z-index: 1;
+}
+.search-box input{
+    width: 360px;
+    height: 25px;
+
+    border: none;
+
+    background-color: transparent;
+    color: #FFF;
+
+    padding-left: 15px;
+
+    font-size: 1.1em;
+}
+.search-box img{
+    width: 20px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.country-list{
+    display: flex;
+
+    position: absolute;
+    top: 30px;
+
+    width: 400px;
+    height: 300px;
+
+    background-color: #111;
+    opacity: 0.9;
+
+    overflow-y: scroll;
+}
+
+.country-list ul{
+    width: 100%;
+}
+
+.country-list ul li{
+    list-style: none;
+    cursor: pointer;
+    padding: 10px;
+    color: #FFF;
+}
+.country-list ul li:hover{
+    border-left: 1px solid #FFF;
+}
+/* SCROLL BAR */
+.country-list::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  .country-list::-webkit-scrollbar-track {
+    background: #111;
+  }
+  
+  /* Handle */
+  .country-list::-webkit-scrollbar-thumb {
+    background: #F1F1F1;
+  }
+  
+  /* Handle on hover */
+  .country-list::-webkit-scrollbar-thumb:hover {
+    background: #FFF;
+  }
+
