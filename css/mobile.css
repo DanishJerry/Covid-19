@@ -35,11 +35,11 @@
             align-items: flex-start;
         }
     }
-@media screen  and (max-width: 670px) {
-
-  #menu{
+@media screen  and (max-width: 780px) {
+     nav #menu{
       display: block;
   }
+
   nav .navbar{
       position: fixed;
       top: -100%;
